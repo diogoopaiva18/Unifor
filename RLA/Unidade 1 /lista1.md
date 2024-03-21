@@ -1,5 +1,5 @@
 # UNIFOR
-**Nome**: Nome do estudante <br>
+**Nome**: Diogo Oliveira Paiva do Nascimento <br>
 **Disciplina**: Raciocínio lógico algorítmico
 
 ## Lista de exercícios 01
