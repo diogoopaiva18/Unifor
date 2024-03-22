@@ -101,8 +101,7 @@ Atualize o algoritmo para determinar se um número inteiro e positivo é par ou 
 
 ```mermaid
 flowchart TD
-A([INICIO])
-([FIM])
+A([INICIO]) --> B([FIM])
 ```
 
 #### Pseudocódigo (1.0 ponto)
