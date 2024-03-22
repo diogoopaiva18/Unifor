@@ -77,6 +77,17 @@ I -->K([FIM])
 
 ```
 Algoritmo ContaAprovacoes
+1  DECLARE salario, salario_novo1, salario_novo2
+2  ESCREVA "Digite seu atual salario:"
+3  INICIO
+4  LEIA salario
+5  SE salario <=500
+6    salario*1.2 = salario_novo1
+7    ESCREVA "Seu novo salario é:", salario_novo1
+8  SENÃO
+9    salario*1.1 = salario_novo2
+10    ESCREVA "Seu novo salario  é:", salario_novo2
+11  FIM_SE
 FIM_ALGORITMO
 ```
 
