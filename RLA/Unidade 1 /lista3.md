@@ -101,7 +101,8 @@ Atualize o algoritmo para determinar se um número inteiro e positivo é par ou 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO])
+([FIM])
 ```
 
 #### Pseudocódigo (1.0 ponto)
@@ -150,7 +151,18 @@ Por exemplo, para a sequência {12, 17, 4, -6, 8, 0}, o seu programa deve escrev
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{"Digite a quantidade de valores:"}}
+B --> C[/n/]
+C --> D[i = 0] 
+D --> E[soma= 0]
+E --> F{i<=n}
+F --FALSE--> G{{"A soma dos numeros é:", soma}}
+G --> L([FIM])
+F --TRUE--> H{{Digite o numero, i:}}
+H --> I[/num/]
+I --> J[soma = soma + soma]
+J --> K[i = i + 1]
+K --LOOP--> F
 ```
 
 #### Pseudocódigo (1.0 ponto)
