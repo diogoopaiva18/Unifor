@@ -171,15 +171,49 @@ V --> R
 
 ```
 Algoritmo Calculadora
-FIM_ALGORITMO
+DECLARE op: INTEIRO; num1,num2,res: REAL
+INICIO
+    ESCREVA "Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"
+    ESCREVA "Digite uma operação:"
+    LEIA op
+    ESCREVA "Digite um número:"
+    LEIA num1
+    ESCREVA "Digite outro número:"
+    LEIA num2
+    ESCOLHA
+        CASO op == 1
+            res = num1 + num2
+            ESCREVA num1, "+", num2, "=", res
+        CASO op == 2
+            res = num1 - num2
+            ESCREVA num1, "-", num2, "=", res
+        CASO op == 3
+            res = num1 * num2
+            ESCREVA num1, "*", num2, "=", res
+        CASO op == 4
+            SE num2 != 0 ENTAO
+                res = num1 / num2
+                ESCREVA num1, "/", num2, "=", res
+            SENAO
+                ESCREVA "Impossível dividir!"
+            FIM_SE
+    SENAO
+        ESCREVA "Operação inválida!"
+    FIM_ESCOLHA
+FIM
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+
+| num1 | num2 | op | num2 != 0 | res | saída               | 
+| --   | --   | -- | --        | --  | --                  |
+| 1    | 0    | 1  |           | 1   | 1 + 0 = 1           |
+| 1    | 0    | 2  |           | 1   | 1 - 0 = 1           |
+| 1    | 0    | 3  |           | 0   | 1 * 0 = 0           |
+| 1    | 0    | 4  | False     |     | Impossível dividir! |
+| 1    | 2    | 4  | True      | 0.5 | 1 / 2 = 0,5         |
+| 1    | 2    | 5  |           |     | Operação inválida!  |
 
 ### Exercício 04 (2.5 pontos)
 Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
@@ -188,19 +222,59 @@ Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{"Digite a idade do aluno:"}}
+B --> C[/idade/]
+C --> D{idade >=5 <br>E <br>idade <= 7}
+D --FALSE--> F{idade >=8 <br>E <br>idade <= 10}
+F --FALSE--> G{idade >=11 <br>E <br>idade <= 13}
+G --FALSE--> H{idade >=14 <br>E <br>idade <= 17}
+H --FALSE--> I{idade >=18}
+I --FALSE--> P{{"Digite uma idade válida!"}}
+P --> Z([FIM])
+D --TRUE--> Q{{Infantial A}}
+F --TRUE--> K{{"Infantial B"}}
+G --TRUE--> L{{Juvenil A}}
+H --TRUE--> M{{Juvenil B}}
+I --TRUE--> N{{Adulto}}
+Q --> Z
+K --> Z
+L --> Z
+M --> Z
+N --> Z
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
 Algoritmo ClassificaCategoria
-FIM_ALGORITMO
+DECLARE idade: INTEIRO
+INICIO
+    ESCREVA "Digite a idade do aluno:"       //Solicitar ao aluno a sua idade
+    LEIA idade                               //Armazenar no sistema a idade do aluno 
+    ESCOLHA                                 
+        CASO idade >=5 E idade <= 7          //Tomar Decisão apartir da idade do aluno 
+            ESCREVA "Infantial A"            //Informar ao usuario qual a sua categoria de acordo com sua idade 
+        CASO idade >=8 E idade <= 10         //Tomar Decisão apartir da idade do aluno 
+            ESCREVA "Infantial B"            //Informar ao usuario qual a sua categoria de acordo com sua idade 
+        CASO idade >=11 E idade <= 13        //Tomar Decisão apartir da idade do aluno 
+            ESCREVA "Juvenil A"              //Informar ao usuario qual a sua categoria de acordo com sua idade 
+        CASO idade >=14 E idade <= 17        //Tomar Decisão apartir da idade do aluno 
+            ESCREVA "Juvenil B"              //Informar ao usuario qual a sua categoria de acordo com sua idade 
+        CASO idade >=18                      //Tomar Decisão apartir da idade do aluno 
+            ESCREVA "Adulto"                 //Informar ao usuario qual a sua categoria de acordo com sua idade 
+    SENAO
+        ESCREVA "Digite uma idade válida!"  //Caso o aluno escreva uma idade menor que 5, essa mensagem ser emcaminhada 
+    FIM_ESCOLHA
+FIM
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| idade | idade >=8 E idade <= 10 | idade >=11 E idade <= 13 | idade >=14 E idade <= 17 | idade >=18 | saída                       | 
+| --    | --                      | --                       | --                       | --         | --                          |
+| 4     | False                   | False                    | False                    | False      | Digite uma idade válida!    |
+| -4    | False                   | False                    | False                    | False      | Digite uma idade válida!    |
+| 8     | True                    | False                    | False                    | False      | Infantial A                 |
+| 11    | False                   | True                     | False                    | False      | Infantial B                 |
+| 17    | False                   | False                    | True                     | False      | Infantial C                 |
+| 21    | False                   | False                    | False                    | True       | Adulto                      |
