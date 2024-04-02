@@ -1,5 +1,5 @@
 # UNIFOR
-**Nome**: Nome do estudante<br>
+**Nome**: Diogo Oliveira Paiva do Nascimento<br>
 **Disciplina**: Raciocínio lógico algorítmico
 
 ## Exercício exemplo 1
@@ -19,7 +19,7 @@ G --LOOP--> E
 ```
 
 #### Pseudocódigo
-```java
+```
 ALGORITMO print_n_primeiros
 DECLARE n, num: INTEIRO
 
@@ -28,21 +28,15 @@ INICIO
 	// Variável n como dado de entrada
 	ESCREVA “Digite um número: ”
 	LEIA n
-
 	// Variável num inicializada com valor de 1
 	num ← 1
-
 	// Loop condicional (loop while) que executa as instruções enquanto a condição "num <= n" for verdadeira
 	ENQUANTO num <= n FAÇA
-
 		// Exibe a mensagem no número em questão
 		ESCREVA “Número ”, num
-
 		// Incrementa a variável "num" em 1
 		num ← num + 1
-
 	FIM_ENQUANTO
-
 FIM
 ```
 
@@ -80,29 +74,20 @@ F --LOOP--> E
 ```java
 ALGORITMO	soma_n_numeros()
 DECLARE	n, i, soma: INTEIRO
-
 INICIO
-
 	// Exibe a mensagem para entrada de dados
 	ESCREVA “Digite a quantidade de números: ”
-
 	// Armazena a entrada do usuário na variável "n"
 	LEIA n
-
 	// Variável soma inicializada com valor de 0
 	soma ← 0 
-
 	// Loop contado (loop for) executa as instruções a cada iteração dos valores de 'i' de 1 até n, incrementando 'i' em 1.
 	PARA i DE 1 ATÉ n PASSO 1 FAÇA
-
 		// Incrementa a soma conforme cada iteração da variável "i"
 		soma ← soma + i
-
 	FIM_PARA
-
 	// Exibe a mensagem como saída de dados
 	ESCREVA “A soma é igual a ”, soma
-
 FIM
 ```
 
@@ -145,51 +130,36 @@ G --LOOP--> D
 
 #### Pseudocódigo (1.0 ponto)
 
-```java
+```
 ALGORTIMO verifica_par_impar
 DECLARE num, resto: INTEIRO
-
 INICIO
-
 	// Entrada do usuário de um número inteiro qualquer armezando na variável "num"
 	ESCREVA "Digite um número: "
-
 	// Armazena o valor de entrada na variável "num"
 	LEIA num
-
 	// Loop condicional (loop while) executa as instruções enquanto a condição "num < 0" for verdadeira
 	ENQUANTO num < 0 FAÇA
-
 		// Exibe a mensagem com a solicitação de um número ao usuário
 		ESCREVA "Digite um número maior ou igual a zero:"
-
 		// Um novo número é atribuido na variável "num"
 		LEIA num
-
 	FIM_ENQUANTO
-
 	// Executa as instruções sob a condição "num >= 0" for verdadeira
 	SE num >= 0 ENTAO
-
 		// Calcula o resto da divisão de "num" por 2
 		resto ← num % 2
-               
 		// Executa a instrução se o resto é igual a zero
 		SE resto == 0 ENTAO
 			ESCREVA "O número é par!"
-
 		// Executa a instrução se o resto não for igual a zero
 		SENAO
 			ESCREVA "O número é impar!"
-
 		FIM_SE
-
 	// Executa a instrução se inteiro for negativo
 	SENAO                               
 		ESCREVA "O número deve ser postivo!"
-
 	FIM_SE
-
 FIM
 ```
 
@@ -221,23 +191,16 @@ F --LOOP--> E
 ```java
 ALGORTIMO MultiploTres
 DECLARE n: INTEIRO
-
 INICIO
-
 	// Variável n como dado de entrada
 	ESCREVA "Digite a quantidade de números:"
-
 	// Armazena o valor de entrada na variável "n"
 	LEIA n
-
 	//  Loop contado (loop for) executa as instruções a cada iteração dos valores de 'i' de 0 até n-1, incrementando 'i' em 3.
 	PARA i DE 0 ATÉ n-1 PASSO 3 FAÇA
-
 		// Exibe a mensagem relativa ao i em cada iteração
 		ESCREVA i
-
 	FIM_PARA
-
 FIM
 ```
 
@@ -288,44 +251,31 @@ I --LOOP--> E
 
 #### Pseudocódigo (1.0 ponto)
 
-```java
+```
 ALGORITMO SomaValores
 DECLARE n,i: INTEIRO; soma,num: REAL
-
 INICIO
-
 	// Dado de entrada armezenado na variável n
 	ESCREVA "Digite a quantidade de números:"
-
 	// Armazena o valor de entrada na variável "n"
 	LEIA n
-
 	// Inicializa a variável "soma" em 0
 	soma <- 0
-
 	// Inicializa a variável "i" em 1
 	i <- 1
-
 	// Loop condicional (loop while) executa as instruções enquanto a condição "i <= n" for verdadeira
 	ENQUANTO i <= n FAÇA
-
 		// Exibe a mensagem solictando o número em cada iteração
 		ESCREVA "Digite o número", i,":"
-
 		// Armazena o valor de entrada na variável "num"
 		LEIA num
-
 		// Incrementa "num" na variável "soma" em cada iteração
 		soma <- soma + num
-
 		// Incrementa 1 na variável "num" em cada iteração
 		i <- i + 1
-
 	FIM_ENQUANTO
-
 	// Exibe a mensagem concatenando aos caracteres "A soma dos número é" com a variável "soma".
 	ESCREVA "A soma dos número é", soma
-
 FIM
 ```
 
@@ -366,50 +316,35 @@ K --LOOP-->  E
 
 #### Pseudocódigo
 
-```java
+```
 ALGORTIMO QuantMedia
 DECLARE nota, soma, media: REAL; cont: INTEIRO
-
 INICIO
-	
 	// Entrada do usuário da primeira nota
 	ESCREVA "Digite a nota do aluno (nota negativa finaliza): "
-
 	// Armazena o valor de entrada na variável "nota"
 	LEIA nota
-	
 	// Inicialização das variáveis soma e cont
 	soma <- 0
 	cont <- 0
-	
 	// Loop condicional para execucar as instruções até que a nota seja negativa
 	ENQUANTO nota >= 0 FAÇA
-
 		// Incrementa "nota" à variável "soma" a cada iteração
 		soma <- soma + nota
-
 		// Incrementa em 1 na variável "cont" a cada iteração
 		cont <- cont + 1
-
 		// Solicita uma nota de outro aluno, sendo valores negativos permitem a saída do loop condicional (loop while)
 		ESCREVA "Digite a nota do aluno (nota negativa finaliza): "
-
 		// Reatribui um novo valor na variável "nota"
 		LEIA nota
-
 	FIM_ENQUANTO
-
 	// Condição para exibir a contagem e média das notas se a variável cont for maior que zero.
 	SE cont > 0 ENTÃO
-
 		// Calcula a média das notas dos alunos aprovados
 		media <- soma / cont
-
 		// Exibe a mensagem com o número de alunos aprovados e a média geral
 		ESCREVA "Foram lidas", cont, "nota(s). A média aritmética é", media
-
 	FIM_SE
-
 FIM
 ```
 
