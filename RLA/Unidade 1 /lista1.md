@@ -78,25 +78,25 @@ I -->K([FIM])
 ```
 Algoritmo ContaAprovacoes
 1  DECLARE salario, salario_novo1, salario_novo2
-2  ESCREVA "Digite seu atual salario:"
-3  INICIO
-4  LEIA salario
-5  SE salario <=500
-6    salario*1.2 = salario_novo1
-7    ESCREVA "Seu novo salario é:", salario_novo1
+2  INICIO
+3  ESCREVA "Digite seu atual salario:"       //Solicitar ao usuario qual o salario dele 
+4  LEIA salario     //Armezenar a resposta em forma de variavel "salario"
+5  SE salario <=500      //Decicir se o salario é menor ou igual a 500, para poder decidir a proxima ação 
+6    salario_novo1 -> salario * 1.2        //Atualizar o salario caso seja menor ou igual a 500
+7    ESCREVA "Seu novo salario é:", salario_novo1     //Falar para o usuario qual seu novo salario 
 8  SENÃO
-9    salario*1.1 = salario_novo2
-10    ESCREVA "Seu novo salario  é:", salario_novo2
+9    salario_novo2 -> salario * 1.1    //Atualizar o salario caso seja maior de 500
+10    ESCREVA "Seu novo salario  é:", salario_novo2     //Falar para o usuario qual seu novo salario 
 11  FIM_SE
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (1.0 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-|              |              |              |              |              |
-|              |              |              |              |              |
+|    Salario   |    Aumento   | Salario Novo |
+|      --      |      --      |      --      |
+|     750      |      10%     |      825     |
+|     450      |      20%     |      540     |
 
 ## Exercício 03 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
