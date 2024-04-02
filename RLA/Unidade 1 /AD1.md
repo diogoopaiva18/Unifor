@@ -8,8 +8,8 @@
 **Aluno(a):** Diogo Oliveira Paiva do Nascimento <br>
 **Matrícula:** 2410314 <br>
 
-**1a chamada (Sim/Não):** Sim <br>
-**2a chamada (Sim/Não):** Não
+**1a chamada (Sim/Não):** Não <br>
+**2a chamada (Sim/Não):** Sim
 
 # Avaliação Diagnóstica 1
 
@@ -149,22 +149,22 @@ J --LOOP--> E
 
 ```
 Algoritmo ContaAprovacoes
-1  ALGORITMO ContarAprovados
+1  ALGORITMO ContarAprovados         
 2  DECLARE n, nota, cont, i: INTEIRO
 3  INICIO
-4    ESCREVA “Digite o número de alunos: “
-5    LEIA n
-6    cont ← 0
-7    i ← 1
-8    ENQUANTO i <= n FAÇA
-9      ESCREVA “Digite a nota do aluno “, i, “: “
-10     LEIA nota
-11     SE nota >= 50 E nota <= 100 ENTÃO
-12       cont ← cont + 1
+4    ESCREVA “Digite o número de alunos: “         //Solicitar ao usuario o numero total de alunos
+5    LEIA n         //Armazenar no sistema o numero de alunos na variavel "n"
+6    cont ← 0         //Atribuir o valor 0 para a variavel "cont"
+7    i ← 1         //Atribuir o valor 1 para a variavel "i"
+8    ENQUANTO i <= n FAÇA         //Tomar uma decisão dependende da variavel "i" e assim criar um loop
+9      ESCREVA “Digite a nota do aluno “, i, “: “         //Perguntar ao usuario qual a nota do aluno de acordo com "i"
+10     LEIA nota         //Armazenar a nota no sistema como um variavel 
+11     SE nota >= 50 E nota <= 100 ENTÃO         //Tomar um decisão apartir do valor da nota
+12       cont ← cont + 1         //Atribuir +1 na variavel "cont" para que seja gerado um novo valor de "cont" e assim gerar novamente o loop
 13     FIM_SE
-14     i ← i + 1
+14     i ← i + 1             //Atribuir +1 na variavel "i" para que possa dar continuidade na contagem das notas e dos alunos
 15   FIM_ENQUANTO
-16   ESCREVA “Número de alunos aprovados: “, cont
+16   ESCREVA “Número de alunos aprovados: “, cont         //Falar para o usuario a quantidade de alunos aprovados 
 17 FIM_ALGORITMO
 18 FIM
 ```
@@ -229,20 +229,20 @@ K --LOOP--> G
 Algoritmo SomaNumeros
 1 DECLARE n, soma, i, num: INTEIRO
 2 INICIO
-3   ESCREVA “Digite a quantidade de números (n >= 0): “
-4   LEIA n
-5   SE n < 0 ENTÃO
-6     ESCREVA “O valor deve ser maior ou igual a zero!”
+3   ESCREVA “Digite a quantidade de números (n >= 0): “         //Solicitar ao usuario a quantidade de termos que vai ser utilizada
+4   LEIA n         //Armazenar no sistema a quantidade como variavel "n"
+5   SE n < 0 ENTÃO         //Tomar um decisão apartir da variavel, e vericar se ela é positiva
+6     ESCREVA “O valor deve ser maior ou igual a zero!”          //Caso a quantidade de termos for negativa, ira falar para o usuario que o valor tem que ser maior ou igual a zero 
 7   SENÃO
-8     soma ← 0
-9     i ← 1
-10    ENQUANTO i <= n FAÇA
-11      ESCREVA “Digite um número: “
-12      LEIA num
-13      soma ← soma + num
-14      i ← i + 1
+8     soma ← 0         //Atribuir o valor 0 para a variavel "soma"
+9     i ← 1         //Atribuir o valor 1 para a variavel "i" 
+10    ENQUANTO i <= n FAÇA         //Tomar uma decisão em relação a variavel "n" e inciar o loop caso precise
+11      ESCREVA “Digite um número: “         //Perguntar o usuario um numero 
+12      LEIA num         //Armezenar no sistema a variavel "num"
+13      soma ← soma + num         //Atribuiur "soma + num" a variavel "soma", para que possa existir um novo valor da soma total e poder gerar um loop 
+14      i ← i + 1         //atribuir o novo valor de i apartir da quantidade de vezes que for utilizado o "i"
 15    FIM_ENQUANTO
-16    ESCREVA “A soma dos números é “, soma
+16    ESCREVA “A soma dos números é “, soma         //Digitar ao usuario qual a soma total dos numero de acorodo com a variavel "soma"
 17   FIM_SE
 18 FIM_ALGORITMO
 19 FIM
