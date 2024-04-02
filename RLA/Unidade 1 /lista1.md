@@ -105,7 +105,14 @@ Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média a
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{"Qual sua idade?"}}
+B --> C[/idade/]
+C --> D{idade<18}
+D --SIM--> E[18-idade]
+E --> F[/falta/]
+F --> G{{"Voce nao pode tirar a CNH, faltam ", falta }}
+D --NAO--> H{{"Voce pode tirar a CNH"}}
+H --> I ([FIM})
 ```
 
 #### Pseudocódigo (1 ponto)
