@@ -299,16 +299,16 @@ I --LOOP--> E
 Algoritmo SomaSerie
 1 DECLARE n, S, numerador, denominador, termo, i: INTEIRO
 2 INICIO
-3 ESCREVA “Digite o número de termos da série S: “
-4 LEIA n
-5 S ← 0
-6   PARA i DE 0 ATÉ n PASSO 1 FAÇA
-7     numerador ← 2 * i + 1
-8     denominador ← 2 * i + 2
-9     termo ← numerador / denominador
-10    S ← S + termo
-11  FIM_PARA
-12 ESCREVA “Soma da série S é “, S
+3 ESCREVA “Digite o número de termos da série S: “          //Solicitar ao usuario a quantidade de termos que se vai utilizar
+4 LEIA n         //Armazenar no sistema a variavel como "n"
+5 S ← 0         //Atribuir o valor 0 para a variavel "S"
+6   PARA i DE 0 ATÉ n PASSO 1 FAÇA         //Determinar o passo q vai ser utilizado e iniciar um loop 
+7     numerador ← (2 * i) + 1         //Atribuir "(2 * i) + 1 " a variavel "numerador" para que 
+8     denominador ←(2 * i)+ 2         //Atribuir "(2 * i) + 2" a variavel "denominador"
+9     termo ← numerador / denominador         //Atribuir duas variaveis em uma so, como se fosse uma divisão 
+10    S ← S + termo         //Atribuir a variavel "S" e a variavel "termo" em uma nova variavel "S" para que possa acontecer o loop 
+11  FIM_PARA 
+12 ESCREVA “Soma da série S é “, S         //Digitar ao usuario que a soma total é igual a variavel "S"
 13 FIM_ALGORITMO
 14 FIM
 ```
@@ -358,16 +358,16 @@ H --> I
 Algoritmo CalcFatorial
 1 DECLARE n, fator, i: INTEIRO
 2 INICIO
-3 ESCREVA “Digite um número inteiro não-negativo:”
-4 LEIA n
-5   SE n >= 0 ENTÃO
-6     fator ← 1
-7     PARA i DE 1 ATÉ n PASSO 1 FAÇA
-8       fator ← fator * i
+3 ESCREVA “Digite um número inteiro não-negativo:”         //Solicitar ao usuario um numero inteiro não-negativo 
+4 LEIA n         //Armazenar no sistema a variavel "n" como o numero inteiro não-negativo 
+5   SE n >= 0 ENTÃO         //Decidir se o "n" é positivo 
+6     fator ← 1         //Atribuir o valor 1 para a variavel "fator"
+7     PARA i DE 1 ATÉ n PASSO 1 FAÇA            //Decida qual vai ser o passo e decidir ate "n"  
+8       fator ← fator * i                //Atribuir o "fator * i" para a variavel "fator" para que seja criada uma nova variavel e possa ser gerado o loop
 9     FIM_PARA
-10  ESCREVA “O fatorial de “, n, “ é: “, fator
+10  ESCREVA “O fatorial de “, n, “ é: “, fator              //Aqui voce vai expor para o usuario qual o fator de acordo com o "n" que ele escreveu no comeco da questão 
 11  SENÃO
-12    ESCREVA “O valor deve ser maior ou igual a zero!”
+12    ESCREVA “O valor deve ser maior ou igual a zero!”         //Essa mensagem sera encaminhada para o usuario caso ele escreva um numero menor que 0
 13  FIM_SE
 14 FIM_ALGORITMO
 FIM
@@ -418,17 +418,17 @@ I --LOOP--> E
 Algoritmo GeraFibonacci
 1 DECLARE n, a, b, termo_atual, i: INTEIRO
 2 INICIO
-3   ESCREVA “Número de termos da série Fibonacci: “
-4   LEIA n
-5   a ← 0
-6   b ← 1
-7   PARA i DE 1 ATÉ n PASSO 1 FAÇA
-8     ESCREVA a
-9     termo_atual ← a + b
-10    a ← b
-11    b ← termo_atual
+3   ESCREVA “Número de termos da série Fibonacci: “          //Solicitar ao usuario a quantidade de termos que ele quer utiizar
+4   LEIA n          //Armazenar no sistema a quantidade de termos na variavel "n"
+5   a ← 0          //Atribuir o valor 0 para a variavel "a"
+6   b ← 1         //Atribuir o valor 1 para a variavel "b"
+7   PARA i DE 1 ATÉ n PASSO 1 FAÇA             //Determinar o passo que vai ser utilizado 
+8     ESCREVA a         //Utilizar a variavel "a"
+9     termo_atual ← a + b         //Atribuir "a + b" a variavel "termo_atual", pois ira atualizar o termo e poder realizar a troca de numeros 
+10    a ← b         //Atribuir "b" a "a" pra poder haver a troca de numeros
+11    b ← termo_atual         //atriuir o "termo_atual" para "b" pra finalizar a troca dos termos 
 12 FIM_PARA
-13 ESCREVA “FIM”
+13 ESCREVA “FIM”         //Sinalizar ao usuario o fim do algoritmo 
 14 FIM_ALGORITMO
 FIM
 ```
@@ -481,20 +481,20 @@ E --> W
 Algoritmo InverteInteiro
 1 DECLARE num, num_inv, digito: INTEIRO
 2 INICIO
-3 ESCREVA “Digite um número inteiro: “
-4 LEIA num
-5   SE num >= 0 ENTÃO
-6     num_inv ← 0
-7     SE num > 0 ENTÃO
-8       ENQUANTO num > 0 FAÇA
-9         digito ← num % 10
-10        num_inv ← num_inv * 10 + digito
-11        num ← num // 10
+3 ESCREVA “Digite um número inteiro: “         //Solicitar ao usuario o numero interio 
+4 LEIA num         //Armazenar o numero inteiro dentro do sistema como variavel "num"
+5   SE num >= 0 ENTÃO         //Decidir de o "num" é positvo 
+6     num_inv ← 0         //Atribuir o valo 0 para a variaveel "num_inv" para poder a contagem da variavel estar zerada
+7     SE num > 0 ENTÃO         //Decidir se o "num" é positivo e qual ação ira ter 
+8       ENQUANTO num > 0 FAÇA         //Decidir o que vai ser feito caso o "num" seja positivo, iniciando aqui o loop 
+9         digito ← num % 10         //Atribuir "num % 10" pra poder ter a divisao por inteiro do numero e descobrir qual o valor das dezenas 
+10        num_inv ← num_inv * 10 + digito         //Atribuir o valor das unidades e invertero numero 
+11        num ← num // 10         //Atribuir o "num//10" antigo para o novo "num" para que possa existir o loop 
 12      FIM_ENQUANTO
 13    SENÃO
-14      ESCREVA “O número deve ser positivo!”
+14      ESCREVA “O número deve ser positivo!”         //Caso usuario não escreva um numero positivo essa vai ser a sua resposta 
 15    FIM_SE
-16    ESCREVA “Número invertido:”, num_inv
+16    ESCREVA “Número invertido:”, num_inv         //Responder o usuario com o numero invertido e utilizando a variavel nova 
 17  SENÃO
 18    ESCREVA “O número deve ser não-negativo!”
 19  FIM_SE
